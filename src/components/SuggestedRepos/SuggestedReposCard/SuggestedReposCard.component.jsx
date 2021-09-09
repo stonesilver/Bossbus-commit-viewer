@@ -1,9 +1,19 @@
+import { Link } from 'react-router-dom';
 import './suggestedReposCard.styles.scss';
 
 const SuggestedReposCard = ({ text }) => {
   return (
     <div className='suggested-repos-card'>
-      <p className='suggested-repos-card-text'>{text}</p>
+      <Link
+        to={{
+          pathname: '/commits',
+          search: `?query=${text}`,
+          state: { detail: '' },
+        }}
+        className='suggested-repos-card-text'
+      >
+        {text}
+      </Link>
     </div>
   );
 };
