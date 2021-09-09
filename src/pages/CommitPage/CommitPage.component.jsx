@@ -10,7 +10,7 @@ const CommitPage = ({ searchInput, handleChange, onSubmit }) => {
         handleChange={handleChange}
         onSubmit={onSubmit}
       />
-      <DisplayCommits searchInput={searchInput} />
+      <DisplayCommits />
     </div>
   );
 };
