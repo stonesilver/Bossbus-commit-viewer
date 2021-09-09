@@ -46,7 +46,7 @@ const DisplayCommits = () => {
             </div>
           ) : dataSet.length ? (
             dataSet
-              .filter((item, index) => index < 11)
+              .filter((item, index) => index < 10)
               .map((item, index) => (
                 <CommitCard
                   avatar={item?.author?.avatar_url}
