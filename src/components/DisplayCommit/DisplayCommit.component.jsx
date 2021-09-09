@@ -15,7 +15,12 @@ const DisplayCommits = () => {
           `https://api.github.com/repos/${user}/${repo.replace(
             /\s/g,
             '+'
-          )}/commits`
+          )}/commits`,
+          {
+            headers: {
+              Authorization: `${process.env.REACT_APP_GITHUB_AUTH_TOKEN}`,
+            },
+          }
         );
         response = await response.json();
         setDateSet(response);
