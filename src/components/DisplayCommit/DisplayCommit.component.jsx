@@ -31,8 +31,6 @@ const DisplayCommits = () => {
 
     fetchMyAPI();
   }, [searchQuery]);
-
-  console.log({ dataSet, searchQuery });
   return (
     <div className='display-commits'>
       <div className='display-commits-container'>
