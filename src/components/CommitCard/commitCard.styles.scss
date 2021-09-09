@@ -24,7 +24,6 @@
     align-items: center;
     width: 10rem;
     height: 5.875rem;
-    // border: 1px solid gray;
     margin-right: 1.6875rem;
 
     @media screen and (max-width: 768px) {
@@ -105,7 +104,6 @@
     grid-area: date;
     @include grid;
     justify-content: flex-end;
-    // border: 1px solid gray;
 
     &-date {
       @media screen and (max-width: 360px) {

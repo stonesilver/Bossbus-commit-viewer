@@ -1,6 +1,5 @@
 import NavbarCommits from '../../components/NavBarCommits/NavbarCommits.component';
 import DisplayCommits from '../../components/DisplayCommit/DisplayCommit.component';
-// import { Redirect } from 'react-router-dom';
 
 const CommitPage = ({ searchInput, handleChange, onSubmit }) => {
   return (
@@ -16,9 +15,3 @@ const CommitPage = ({ searchInput, handleChange, onSubmit }) => {
 };
 
 export default CommitPage;
-
-// !searchInput ? (
-//   <Redirect to='/' />
-// ) : (
-
-// );

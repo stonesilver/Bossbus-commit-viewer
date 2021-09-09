@@ -5,7 +5,6 @@ import './displayCommit.styles.scss';
 
 const DisplayCommits = () => {
   const [dataSet, setDateSet] = useState([]);
-  // const [error, setError] = useState(false);
   const useQuery = () => new URLSearchParams(useLocation().search);
   const searchQuery = useQuery().get('query');
   useEffect(() => {
@@ -21,7 +20,6 @@ const DisplayCommits = () => {
         response = await response.json();
         setDateSet(response);
       } catch (e) {
-        // setError(true);
         console.log(e);
       }
     }
@@ -29,7 +27,7 @@ const DisplayCommits = () => {
     fetchMyAPI();
   }, [searchQuery]);
 
-  // console.log({ dataSet, searchQuery });
+  console.log({ dataSet, searchQuery });
   return (
     <div className='display-commits'>
       <div className='display-commits-container'>
@@ -37,7 +35,13 @@ const DisplayCommits = () => {
           <p className='search-parameter-text'>{searchQuery}</p>
         </div>
         <div className='fetched-commits'>
-          {dataSet.length ? (
+          {dataSet.message ? (
+            <div className='error'>
+              Repository Not found: Please Enter in This Format{' '}
+              <span className='github-user'>{`{User}`}</span>/
+              <span className='repo'>{`{repo}`}</span>
+            </div>
+          ) : dataSet.length ? (
             dataSet
               .filter((item, index) => index < 11)
               .map((item, index) => (

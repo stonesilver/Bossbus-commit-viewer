@@ -31,16 +31,29 @@
     .fetched-commits {
       margin-top: 2rem;
 
-      @media screen and (max-width:768px) {
+      @media screen and (max-width: 768px) {
         padding: 0 2rem;
       }
 
-      @media screen and (max-width:414px) {
-        padding: 0 .8rem;
+      @media screen and (max-width: 414px) {
+        padding: 0 0.8rem;
       }
 
       .loading {
         font-size: 20px;
+      }
+
+      .error {
+        font-size: 22px;
+
+        .github-user,
+        .repo {
+          background: $secondary;
+          color: $white;
+          margin: 0 0.2rem;
+          padding: 0.2rem 0.35rem;
+          border-radius: 5px;
+        }
       }
     }
   }

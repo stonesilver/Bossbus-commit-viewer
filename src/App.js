@@ -7,28 +7,12 @@ import './App.scss';
 function App() {
   const [searchInput, setSearchinput] = useState('');
   let history = useHistory();
-  // const location = useLocation();
   const handleChange = (event) => {
     setSearchinput(event.target.value);
   };
 
-  // const appendQuery = (key, value) => {
-  //   let pathname = '/commits';
-  //   // returns path: '/app/books'
-  //   let searchParams = new URLSearchParams(location.search);
-  //   // returns the existing query string: '?type=fiction&author=fahid'
-  //   searchParams.set('query', searchInput);
-  //   searchParams.set(key, value);
-  //   history.push({
-  //     pathname: pathname,
-  //     search: searchParams.toString(),
-  //   });
-  // };
-
   const onSubmit = (event, key, value) => {
     event.preventDefault();
-    // appendQuery(event, key, value)
-    // return searchInput ? history.push('./commits') : ''
     return searchInput
       ? history.push({
           pathname: '/commits',
