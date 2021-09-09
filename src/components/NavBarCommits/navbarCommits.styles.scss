@@ -1,0 +1,41 @@
+@import '../../scss/sass-variables';
+
+.commit-navbar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 8.125rem;
+  background: $placeholder;
+
+  @media screen {
+    height: 5.125rem;
+  }
+
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .commit-form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 2rem;
+
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
+
+      .commits-input {
+        width: 41.625rem;
+        height: 3.625rem;
+      }
+
+      .commits-search-btn {
+        width: 12.375rem;
+        height: 3.625rem;
+        margin-left: 1rem;
+      }
+    }
+  }
+}

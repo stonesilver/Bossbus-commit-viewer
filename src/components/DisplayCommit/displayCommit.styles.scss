@@ -1,0 +1,47 @@
+@import '../../scss/sass-variables';
+
+.display-commits {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .search-parameter {
+      text-align: center;
+
+      &-text {
+        font-weight: 600;
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        letter-spacing: -1.5px;
+        color: $primary;
+
+        @media screen and (max-width: 768px) {
+          color: $dark;
+        }
+      }
+    }
+
+    .fetched-commits {
+      margin-top: 2rem;
+
+      @media screen and (max-width:768px) {
+        padding: 0 2rem;
+      }
+
+      @media screen and (max-width:414px) {
+        padding: 0 .8rem;
+      }
+
+      .loading {
+        font-size: 20px;
+      }
+    }
+  }
+}

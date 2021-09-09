@@ -1,0 +1,32 @@
+@import '../../../scss/sass-variables';
+
+.suggested-repos-card {
+  background: $primary;
+  border-radius: 8px;
+  margin-right: 3rem;
+  padding: 8px 16px;
+  transition: background .3s ease-in;
+  cursor: pointer;
+
+  &:hover {
+      background: $secondary;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 2rem;
+    margin-right: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &-text {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: -0.4px;
+    color: $white;
+  }
+}

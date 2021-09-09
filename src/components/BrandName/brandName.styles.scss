@@ -1,0 +1,17 @@
+@import '../../scss/sass-variables';
+
+.navbar-container-brandName {
+  font-size: 1.75rem;
+  font-weight: 700;
+
+  &-text {
+      text-decoration: none;
+    letter-spacing: -0.6px;
+    color: $dark;
+    transition: color 0.3s ease-in;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+}

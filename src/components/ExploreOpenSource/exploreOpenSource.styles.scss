@@ -1,0 +1,30 @@
+@import '../../scss/sass-variables';
+
+.open-source {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 1.5rem;
+  }
+
+  &-container {
+    width: 32%;
+    font-size: 1.25rem;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -0.4px;
+    color: $paragraph;
+
+    @media screen and (max-width: 768px) {
+      width: 82%;
+      font-size: 1.05rem;
+    }
+    
+    @media screen and (max-width: 320px) {
+      width: 82%;
+      font-size: 1.05rem;
+    }
+  }
+}

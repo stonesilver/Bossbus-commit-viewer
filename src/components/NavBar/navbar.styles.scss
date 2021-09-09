@@ -1,0 +1,68 @@
+@import '../../scss/sass-variables';
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 3rem 0 0 0;
+  padding: 0;
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 82%;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    &-brandName {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.6px;
+      color: $dark;
+      cursor: pointer;
+      transition: color 0.3s ease-in;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+
+    &-navlinks {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      color: $dark;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-top: 1rem;
+      }
+
+      &-link {
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -0.4px;
+        margin-left: 4rem;
+        cursor: pointer;
+        transition: color 0.3s ease-in;
+
+        @media screen and (max-width: 768px) {
+        margin-left: 2rem;
+        }
+
+        &:first-child {
+          margin-left: 0rem;
+        }
+
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+  }
+}
