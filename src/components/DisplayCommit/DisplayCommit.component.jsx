@@ -12,10 +12,7 @@ const DisplayCommits = () => {
       try {
         let [user, repo] = searchQuery.split('/');
         let response = await fetch(
-          `https://api.github.com/repos/${user}/${repo.replace(
-            /\s/g,
-            '+'
-          )}/commits`,
+          `https://api.github.com/repos/${user}/${repo}/commits`,
           {
             headers: {
               Authorization: `${process.env.REACT_APP_GITHUB_AUTH_TOKEN}`,

@@ -12,6 +12,7 @@ const FormInput = ({ searchInput, handleChange }) => {
         placeholder='Eg. facebook/react'
         value={searchInput}
         onChange={handleChange}
+        required
       />
     </div>
   );
