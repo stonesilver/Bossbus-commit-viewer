@@ -57,7 +57,7 @@ const DisplayCommits = () => {
                 />
               ))
           ) : (
-            <div className='loading'>loading......'</div>
+            <div className='loading'>Loading......'</div>
           )}
         </div>
       </div>

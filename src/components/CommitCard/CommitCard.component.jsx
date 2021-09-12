@@ -1,6 +1,12 @@
 import './commitCard.styles.scss';
 
 const CommitCard = ({ avatar, username, commit, date }) => {
+  const formattedDate = new Date(date).toLocaleDateString().replace(/\//g, '-');
+  const time = new Date(date).toLocaleTimeString('en-US', {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false,
+  });
   return (
     <div className='commit-card'>
       <div className='user'>
@@ -13,13 +19,7 @@ const CommitCard = ({ avatar, username, commit, date }) => {
         <p className='commit-message-text'>{commit.slice(0, 85)}</p>
       </div>
       <div className='commit-date'>
-        <p className='commit-date-date'>{`${new Date(
-          date
-        ).getFullYear()}-${new Date(date).getMonth()}-${new Date(
-          date
-        ).getDate()} ${new Date(date).getMinutes()}:${new Date(
-          date
-        ).getSeconds()}`}</p>
+        <p className='commit-date-date'>{`${time} ${formattedDate}`}</p>
       </div>
     </div>
   );
