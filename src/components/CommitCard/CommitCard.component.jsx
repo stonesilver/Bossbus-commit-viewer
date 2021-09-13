@@ -16,7 +16,7 @@ const CommitCard = ({ avatar, username, commit, date }) => {
         <div className='username'>{username}</div>
       </div>
       <div className='commit-message'>
-        <p className='commit-message-text'>{commit.slice(0, 85)}</p>
+        <p className='commit-message-text'>{commit}</p>
       </div>
       <div className='commit-date'>
         <p className='commit-date-date'>{`${time} ${formattedDate}`}</p>
