@@ -10,7 +10,7 @@ const SuggestedRepos = () => {
     )
       .then((res) => res.json())
       .then((data) => setRepoData(data.items))
-      .catch((err) => console.log(err));
+      .catch((err) => setRepoData([]));
   }, []);
   return (
     <div className='suggested-repos'>
@@ -19,11 +19,15 @@ const SuggestedRepos = () => {
           Or pick one of these suggested repos
         </p>
         <div className='suggested-repos-container-suggested-flex'>
-          {repoData
-            .filter((item, index) => index < 4)
-            .map((item, index) => (
-              <SuggestedReposCard key={index} text={item?.full_name} />
-            ))}
+          {repoData.length
+            ? repoData
+                .filter((item, index) => index < 4)
+                .map((item, index) => (
+                  <SuggestedReposCard key={index} text={item?.full_name} />
+                ))
+            : [...Array(4).keys()].map((item, index) => (
+                <SuggestedReposCard key={index} text='Loading...' />
+              ))}
         </div>
       </div>
     </div>

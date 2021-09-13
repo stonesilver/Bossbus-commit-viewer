@@ -22,11 +22,13 @@ const DisplayCommits = () => {
         response = await response.json();
         setDateSet(response);
       } catch (e) {
-        console.log(e);
+        setDateSet({ message: '404 Network error' });
       }
     }
 
     fetchMyAPI();
+
+    return (setDateSet([]))
   }, [searchQuery]);
   return (
     <div className='display-commits'>

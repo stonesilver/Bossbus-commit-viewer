@@ -10,7 +10,9 @@ const SuggestedReposCard = ({ text }) => {
           search: `?query=${text}`,
           state: { detail: '' },
         }}
-        className='suggested-repos-card-text'
+        className={`${
+          text === 'Loading...' ? 'disable-link' : ''
+        } suggested-repos-card-text`}
       >
         {text}
       </Link>

@@ -5,12 +5,12 @@
   border-radius: 8px;
   margin-right: 3rem;
   padding: 8px 16px;
-  transition: background .3s ease-in;
+  transition: background 0.3s ease-in;
   cursor: pointer;
   text-align: center;
 
   &:hover {
-      background: $secondary;
+    background: $secondary;
   }
 
   @media screen and (max-width: 768px) {
@@ -31,5 +31,9 @@
     color: $white;
     text-decoration: none;
     display: block;
+  }
+
+  .disable-link {
+    pointer-events: none;
   }
 }
